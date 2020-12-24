@@ -2,6 +2,7 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from '../../../views/examples/Home';
+import Param from '../../../views/examples/Param';
 import About from '../../../views/examples/About';
 import './index.css';
 
@@ -9,12 +10,16 @@ const Content = props => {
     return (
         <main className="Content">
             <Switch>
-                <Route exact path="/about">
-                    <About />
-                </Route>
-                <Route path="/">
+                <Route exact path="/">
                     <Home />
                 </Route>
+                <Route path="/param/:id">
+                    <Param />
+                </Route>
+                <Route path="/about">
+                    <About />
+                </Route>
+
             </Switch>
         </main>
     )
