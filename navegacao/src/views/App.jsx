@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router } from 'react-router-dom';
 import './App.css';
 
 import Menu from '../components/layouts/Menu/index';
@@ -7,8 +8,10 @@ import Content from '../components/layouts/Content/index';
 const App = props => {
     return (
         <div className="App">
-            <Menu />
-            <Content />
+            <Router>
+                <Menu />
+                <Content />
+            </Router>
         </div>
     )
 }
